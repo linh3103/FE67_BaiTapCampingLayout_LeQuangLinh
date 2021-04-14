@@ -1,0 +1,260 @@
+/* global */
+/* Luôn đặt margin và padding về 0 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  background-color: #faf4f2;
+}
+
+/* header */
+
+.header {
+  background-color: #f8e1db;
+  padding: 20px 70px;
+}
+
+.header ul {
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.header ul li {
+  /* bỏ dấu chấm trước li */
+  list-style: none;
+
+  /* đặt menu nằm trên 1 dòng */
+  display: inline;
+
+  /* tạo khoảng cách giữa các menu */
+  margin-right: 20px;
+}
+
+.header ul li a {
+  /* bỏ dấu gạch dưới của menu */
+  text-decoration: none;
+  color: black;
+}
+
+.header a {
+  text-decoration: none;
+}
+.header ul li.active a {
+  color: #e86f55;
+}
+
+.carousel {
+  background-image: url(./../images/BG.png);
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 0 0 200px 200px;
+  position: relative;
+}
+
+/* Muốn đặt position absolute thì phải đặt position relative cho lớp cha (Carousel phía trên) */
+.carousel .carousel_content {
+  position: absolute;
+  bottom: -150px;
+}
+
+.carousel .carousel_item {
+  float: left;
+  width: 25%;
+  padding: 15px;
+  text-align: center;
+}
+
+.carousel .carousel_item .carousel_text {
+  border-radius: 20px;
+  background-color: white;
+  padding: 50px;
+}
+
+.activities {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.activities .activities__title {
+  font-size: 24px;
+  color: #8d8d8d;
+}
+
+.activities .activities__item {
+  float: left;
+  width: 25%;
+  padding: 15px;
+}
+
+.activities__item .activities__card {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+.activities__item .activities__card img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.activities__img {
+  position: relative;
+}
+
+.activities__img .activities__heart {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  right: 20px;
+  color: #e76f51;
+  background-color: #cedef0;
+  line-height: 40px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.activities__img .activities__heart:hover {
+  line-height: 40px;
+  text-align: center;
+  color: red;
+}
+
+.activities__item .activities__text h2 {
+  color: #3b3735;
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 11px;
+}
+
+.activities__item .activities__text p {
+  line-height: 28px;
+  margin-top: 11px;
+  margin-bottom: 25px;
+  color: #97918e;
+}
+
+.activities__item .activities__text button {
+  background-color: #e8e8e8;
+  color: #8d8f91;
+  border-radius: 40px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 13px 54px;
+}
+
+.activities .activities__viewall button {
+  background-color: transparent;
+  border: solid 2px #e76f51;
+  color: #e76f51;
+  border-radius: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  padding: 13px 71px;
+}
+
+.activities__item .activities__text button:hover,
+.activities .activities__viewall button:hover {
+  background-color: #e76f51;
+  color: white;
+}
+
+.activities__item .activities__text button:focus,
+.activities .activities__viewall button:focus {
+  outline: none;
+}
+
+/* start contact */
+.contact {
+  background-color: #f8e1db;
+  border-radius: 20px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.contact__left,
+.contact__right {
+  float: left;
+  width: 50%;
+  padding: 20px 60px;
+}
+
+.contact__left {
+  background: url(../images/mask.png);
+  background-size: cover;
+  background-position: center;
+}
+.contact__right {
+  color: #8d8d8d;
+  margin-top: 50px;
+}
+
+.contact__right p {
+  margin-top: 10px;
+}
+
+.contact__right h3 {
+  margin-bottom: 20px;
+}
+
+.contact__app,
+.contact__us {
+  float: inherit;
+  width: 50%;
+  margin-top: 30px;
+}
+
+.contact__us i {
+  color: #fa5a5a;
+  padding-right: 7px;
+  font-size: 20px;
+}
+/* end contact */
+
+/* start footer */
+.footer {
+  background-color: #f8e1db;
+  border-radius: 100px 100px 0 0;
+  padding: 100px 30px;
+  color: #3b3735;
+  margin-top: 70px;
+}
+.footer h3 {
+  font-size: 18px;
+  margin-bottom: 21px;
+}
+.footer__about {
+  float: left;
+  width: 40%;
+  line-height: 28px;
+  padding: 0 20px;
+}
+.footer__list {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+}
+.footer__nav {
+  float: left;
+  width: 33.33%;
+}
+.footer__nav li {
+  list-style: none;
+  margin-bottom: 12px;
+}
+.footer__nav a {
+  text-decoration: none;
+  color: #3b3735;
+}
+.footer__copyrights {
+  text-align: center;
+  padding-top: 30px;
+}
